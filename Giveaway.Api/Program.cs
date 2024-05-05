@@ -47,6 +47,7 @@ builder.Services.AddSwaggerGen(swagger =>
 });
 
 builder.Services.AddMediatR(Assembly.Load("Giveaway.Application"), typeof(Program).Assembly);
+builder.Services.AddAutoMapper(Assembly.Load("Giveaway.Application"));
 
 builder.Services
     .AddPersistence(builder.Configuration)

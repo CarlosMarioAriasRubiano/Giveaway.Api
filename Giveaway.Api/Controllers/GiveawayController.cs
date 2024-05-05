@@ -1,4 +1,5 @@
 ﻿using Giveaway.Api.Authentication;
+using Giveaway.Application.DTOs;
 using Giveaway.Application.Feature.AwardRangeDetails.Commands;
 using Giveaway.Application.Feature.Awards.Commands;
 using MediatR;
@@ -19,7 +20,7 @@ namespace Giveaway.Api.Controllers
         }
 
         [HttpPost("assignedNumberToUser")]
-        public async Task<string> AssignedNumberToUserAsync(
+        public async Task<AwardRangeDetailDto> AssignedNumberToUserAsync(
             AssignedNumberToUserCommand command
         )
         {
@@ -27,11 +28,11 @@ namespace Giveaway.Api.Controllers
         }
 
         [HttpPost("createAward")]
-        public async Task CreateAwardAsync(
+        public async Task<AwardDto> CreateAwardAsync(
             CreateAwardCommand command
         )
         {
-            await mediator.Send(command);
+            return await mediator.Send(command);
         }
     }
 }

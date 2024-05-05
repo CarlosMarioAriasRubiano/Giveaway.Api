@@ -9,7 +9,7 @@ namespace Giveaway.Api.Authentication
         {
             if (!context.HttpContext.Request.Headers.TryGetValue(AuthConstants.ApiKeyHeaderName, out var extractedApiKey))
             {
-                context.Result = new UnauthorizedObjectResult("API Key missing");
+                context.Result = new UnauthorizedObjectResult("Ingrese API Key");
                 return;
             }
 
@@ -18,7 +18,7 @@ namespace Giveaway.Api.Authentication
 
             if (!apiKey!.Equals(extractedApiKey))
             {
-                context.Result = new UnauthorizedObjectResult("Invalid API Key");
+                context.Result = new UnauthorizedObjectResult("API Key inválido");
                 return;
             }
         }

@@ -21,7 +21,7 @@ namespace Giveaway.Domain.Services
             this.awardRangeService = awardRangeService;
         }
 
-        public async Task CreateAwardAsync(Award award)
+        public async Task<Award> CreateAwardAsync(Award award)
         {
             _ = await customerService.GetCustomerByIdAsync(award.CustomerId);
 
@@ -30,6 +30,10 @@ namespace Giveaway.Domain.Services
             AwardRange awardRange = new(awardId);
 
             await awardRangeService.CreateAwardRange(awardRange);
+
+            award.Id = awardId;
+
+            return award;
         }
     }
 }

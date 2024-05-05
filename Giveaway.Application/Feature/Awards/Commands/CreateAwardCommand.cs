@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using Giveaway.Application.DTOs;
+using MediatR;
 using System.ComponentModel.DataAnnotations;
 
 namespace Giveaway.Application.Feature.Awards.Commands
@@ -6,5 +7,5 @@ namespace Giveaway.Application.Feature.Awards.Commands
     public record CreateAwardCommand(
         [Required] string Name,
         [Required] Guid CustomerId
-    ) : IRequest;
+    ) : IRequest<AwardDto>;
 }

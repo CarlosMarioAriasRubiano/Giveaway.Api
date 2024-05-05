@@ -21,7 +21,7 @@ namespace Giveaway.Domain.Services
             this.awardRangeService = awardRangeService;
         }
 
-        public async Task<string> AssignedNumberToUserAsync(
+        public async Task<AwardRangeDetail> AssignedNumberToUserAsync(
             Guid userId,
             Guid awardId
         )
@@ -32,7 +32,7 @@ namespace Giveaway.Domain.Services
 
             if (awardRangeDetail != null)
             {
-                return awardRangeDetail.AssignedNumber.ToString("D5");
+                return awardRangeDetail;
             }
 
             int assignedNumber = await GetMaxNumberAsync(awardRange.Id);
@@ -42,17 +42,17 @@ namespace Giveaway.Domain.Services
 
             await repository.AddAsync(awardRangeDetailSave);
 
-            return awardRangeDetailSave.AssignedNumber.ToString("D5");
+            return awardRangeDetailSave;
         }
 
-        public async Task<AwardRangeDetail> GetAwardRangeDetailByUserId(Guid userId)
+        private async Task<AwardRangeDetail> GetAwardRangeDetailByUserId(Guid userId)
         {
             return await repository.GetByAlternateKeyAsync(
                 awardRangeDetail => awardRangeDetail.UserId == userId
             );
         }
 
-        public async Task<int> GetMaxNumberAsync(Guid awardRangeId)
+        private async Task<int> GetMaxNumberAsync(Guid awardRangeId)
         {
             IEnumerable<AwardRangeDetail> details = await repository.GetAsync(detail => detail.AwardRangeId == awardRangeId);
 
