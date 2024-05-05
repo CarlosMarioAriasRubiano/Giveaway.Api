@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Giveaway.Api", "Giveaway.Api\Giveaway.Api.csproj", "{8F9F5C7E-1B2C-4367-AA87-F3B1548AED5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Giveaway.Api", "Giveaway.Api\Giveaway.Api.csproj", "{8F9F5C7E-1B2C-4367-AA87-F3B1548AED5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Giveaway.Application", "Giveaway.Application\Giveaway.Application.csproj", "{66BBD5CB-C305-4A3B-97DF-4E84492E1ABA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Giveaway.Application", "Giveaway.Application\Giveaway.Application.csproj", "{66BBD5CB-C305-4A3B-97DF-4E84492E1ABA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Giveaway.Domain", "Giveaway.Domain\Giveaway.Domain.csproj", "{B0EDD7FF-0A56-4287-B825-8BCA19FF8DAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Giveaway.Domain", "Giveaway.Domain\Giveaway.Domain.csproj", "{B0EDD7FF-0A56-4287-B825-8BCA19FF8DAC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Giveaway.Infrastructure", "Giveaway.Infrastructure\Giveaway.Infrastructure.csproj", "{4FE5A9A4-FFE4-46D0-A573-0AB348CC147A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Giveaway.Infrastructure", "Giveaway.Infrastructure\Giveaway.Infrastructure.csproj", "{4FE5A9A4-FFE4-46D0-A573-0AB348CC147A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Giveaway.Domain.Tests", "Giveaway.Domain.Tests\Giveaway.Domain.Tests.csproj", "{DD0379BB-98BE-4DED-9B43-E03A6CD68ECB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{4FE5A9A4-FFE4-46D0-A573-0AB348CC147A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4FE5A9A4-FFE4-46D0-A573-0AB348CC147A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4FE5A9A4-FFE4-46D0-A573-0AB348CC147A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD0379BB-98BE-4DED-9B43-E03A6CD68ECB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD0379BB-98BE-4DED-9B43-E03A6CD68ECB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD0379BB-98BE-4DED-9B43-E03A6CD68ECB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD0379BB-98BE-4DED-9B43-E03A6CD68ECB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
